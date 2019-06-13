@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zfy-RW-1q0">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="HKb-Vh-wDr">
+            <objects>
+                <tableViewController id="IUo-po-0hE" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tr5-M3-2Pk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="IKf-Yv-nLa">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Ioy-1L-6xh" rowHeight="60" style="IBUITableViewCellStyleDefault" id="idB-KU-adv">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="idB-KU-adv" id="tcR-Kn-Brr">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="59.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Alive Thread" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ioy-1L-6xh">
+                                                    <rect key="frame" x="20" y="0.0" width="356" height="59.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="bbE-8x-2pi" kind="show" id="wcC-AW-vDu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="IUo-po-0hE" id="a6V-Wh-Vcf"/>
+                            <outlet property="delegate" destination="IUo-po-0hE" id="3h5-qZ-xV2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="W07-75-COD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GL4-Cs-wpo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1826.0869565217392" y="19.565217391304348"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mRw-ve-a3m">
+            <objects>
+                <viewController id="bbE-8x-2pi" customClass="ViewController" customModule="ThreadDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KnK-3V-g2R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zs-xV-qBG">
+                                <rect key="frame" x="106.66666666666669" y="154" width="201" height="30"/>
+                                <state key="normal" title="Do something on alive thread"/>
+                                <connections>
+                                    <action selector="handleAliveThread:" destination="bbE-8x-2pi" eventType="touchUpInside" id="nh1-gr-xRf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WsV-QD-V9X">
+                                <rect key="frame" x="149" y="192" width="116" height="30"/>
+                                <state key="normal" title="Stop alive thread"/>
+                                <connections>
+                                    <action selector="handleStopAliveThread:" destination="bbE-8x-2pi" eventType="touchUpInside" id="Q0T-Dg-oIe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzy-D8-cHI">
+                                <rect key="frame" x="154.66666666666666" y="116" width="104.99999999999997" height="30"/>
+                                <state key="normal" title="Init alive thread"/>
+                                <connections>
+                                    <action selector="handleInitAliveThread:" destination="bbE-8x-2pi" eventType="touchUpInside" id="Ial-fG-CBR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44x-bK-l2z">
+                                <rect key="frame" x="137" y="389" width="140" height="30"/>
+                                <state key="normal" title="Init dispoable thread"/>
+                                <connections>
+                                    <action selector="handleInitDisposableThread:" destination="bbE-8x-2pi" eventType="touchUpInside" id="lVg-mx-8Z1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ln-8A-aou">
+                                <rect key="frame" x="85" y="427" width="244" height="30"/>
+                                <state key="normal" title="Do something on disposable thread"/>
+                                <connections>
+                                    <action selector="handleDisposableThread:" destination="bbE-8x-2pi" eventType="touchUpInside" id="NUX-5D-zD9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rzy-D8-cHI" firstAttribute="centerX" secondItem="LJd-vW-AVf" secondAttribute="centerX" id="1Hz-wr-xvp"/>
+                            <constraint firstItem="WsV-QD-V9X" firstAttribute="top" secondItem="9zs-xV-qBG" secondAttribute="bottom" constant="8" id="6S3-V7-oeM"/>
+                            <constraint firstItem="4Ln-8A-aou" firstAttribute="top" secondItem="44x-bK-l2z" secondAttribute="bottom" constant="8" id="7wQ-Vb-iYg"/>
+                            <constraint firstItem="4Ln-8A-aou" firstAttribute="centerX" secondItem="LJd-vW-AVf" secondAttribute="centerX" id="FJz-nX-eDH"/>
+                            <constraint firstItem="44x-bK-l2z" firstAttribute="top" secondItem="LJd-vW-AVf" secondAttribute="top" constant="325" id="FTL-8F-dlc"/>
+                            <constraint firstItem="44x-bK-l2z" firstAttribute="centerX" secondItem="LJd-vW-AVf" secondAttribute="centerX" id="Gv1-ZX-rBb"/>
+                            <constraint firstItem="WsV-QD-V9X" firstAttribute="centerX" secondItem="LJd-vW-AVf" secondAttribute="centerX" id="JrG-t8-rFd"/>
+                            <constraint firstItem="rzy-D8-cHI" firstAttribute="top" secondItem="LJd-vW-AVf" secondAttribute="top" constant="52" id="OnI-PA-jEk"/>
+                            <constraint firstItem="9zs-xV-qBG" firstAttribute="centerX" secondItem="LJd-vW-AVf" secondAttribute="centerX" id="h90-xY-E5g"/>
+                            <constraint firstItem="9zs-xV-qBG" firstAttribute="top" secondItem="rzy-D8-cHI" secondAttribute="bottom" constant="8" id="s72-RK-ZA2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LJd-vW-AVf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2HM-cG-246" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2636.231884057971" y="19.565217391304348"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1BC-oP-fDp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zfy-RW-1q0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vUP-gF-EB3">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IUo-po-0hE" kind="relationship" relationship="rootViewController" id="4yl-9f-UJd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KQM-gn-df3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918.84057971014499" y="19.565217391304348"/>
+        </scene>
+    </scenes>
+</document>
