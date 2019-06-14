@@ -25,3 +25,13 @@
         - 预期结果：线程的 `isFinished` 为 `true`
 
 
+## 抢救应用
+
+[分析](https://github.com/Monsoir/Notes/blob/master/iOS/rescue-app.md)
+
+- 进入 Rescue
+- **Raise unhandled message exception**
+    - 将引发一个 unrecognized selector 的异常
+    - 同时界面上将会出现弹窗，让用户决定是否继续运行应用
+
+

@@ -12,6 +12,7 @@
 		447C92E022B22AD5002120BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447C92DE22B22AD5002120BE /* Main.storyboard */; };
 		447C92E222B22AD9002120BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 447C92E122B22AD9002120BE /* Assets.xcassets */; };
 		447C92E522B22AD9002120BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447C92E322B22AD9002120BE /* LaunchScreen.storyboard */; };
+		44FDF09022B29D97001988E5 /* ExceptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FDF08F22B29D96001988E5 /* ExceptionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		447C92E122B22AD9002120BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		447C92E422B22AD9002120BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		447C92E622B22AD9002120BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44FDF08F22B29D96001988E5 /* ExceptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExceptionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		447C92D922B22AD5002120BE /* ThreadDemo */ = {
 			isa = PBXGroup;
 			children = (
+				44FDF08F22B29D96001988E5 /* ExceptionViewController.swift */,
 				447C92DA22B22AD5002120BE /* AppDelegate.swift */,
 				447C92DC22B22AD5002120BE /* ViewController.swift */,
 				447C92DE22B22AD5002120BE /* Main.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44FDF09022B29D97001988E5 /* ExceptionViewController.swift in Sources */,
 				447C92DD22B22AD5002120BE /* ViewController.swift in Sources */,
 				447C92DB22B22AD5002120BE /* AppDelegate.swift in Sources */,
 			);

@@ -41,6 +41,26 @@
                                             <segue destination="bbE-8x-2pi" kind="show" id="wcC-AW-vDu"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="mFj-dy-qBT" rowHeight="60" style="IBUITableViewCellStyleDefault" id="1ek-xP-s2u">
+                                        <rect key="frame" x="0.0" y="60" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1ek-xP-s2u" id="jes-CS-4wG">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="59.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Rescue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mFj-dy-qBT">
+                                                    <rect key="frame" x="20" y="0.0" width="356" height="59.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="05z-IS-FRX" kind="show" id="AHa-aD-4Mp"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -54,6 +74,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GL4-Cs-wpo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1826.0869565217392" y="19.565217391304348"/>
+        </scene>
+        <!--Exception View Controller-->
+        <scene sceneID="cHD-sB-FAf">
+            <objects>
+                <viewController id="05z-IS-FRX" customClass="ExceptionViewController" customModule="ThreadDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ee4-42-Fpd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrO-BD-5fb">
+                                <rect key="frame" x="82" y="131" width="250" height="30"/>
+                                <state key="normal" title="Raise unhandled message exception"/>
+                                <connections>
+                                    <action selector="handleRaiseUnhandleException:" destination="05z-IS-FRX" eventType="touchUpInside" id="I0N-Fq-4i3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOT-10-9j6">
+                                <rect key="frame" x="87" y="169" width="240" height="30"/>
+                                <state key="normal" title="Raise EXC_BAD_ACCESS exception"/>
+                                <connections>
+                                    <action selector="handleRaiseExcBadAccessException:" destination="05z-IS-FRX" eventType="touchUpInside" id="ogL-9o-igr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GrO-BD-5fb" firstAttribute="centerX" secondItem="TUo-PO-QaR" secondAttribute="centerX" id="AUJ-Jx-20g"/>
+                            <constraint firstItem="GrO-BD-5fb" firstAttribute="top" secondItem="TUo-PO-QaR" secondAttribute="top" constant="67" id="KCy-vl-UBK"/>
+                            <constraint firstItem="HOT-10-9j6" firstAttribute="top" secondItem="GrO-BD-5fb" secondAttribute="bottom" constant="8" id="Q90-he-a7U"/>
+                            <constraint firstItem="HOT-10-9j6" firstAttribute="centerX" secondItem="TUo-PO-QaR" secondAttribute="centerX" id="odC-G2-glC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TUo-PO-QaR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rzh-Yq-O0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2593" y="233"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mRw-ve-a3m">
@@ -117,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2HM-cG-246" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2636.231884057971" y="19.565217391304348"/>
+            <point key="canvasLocation" x="2594" y="-457"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1BC-oP-fDp">
